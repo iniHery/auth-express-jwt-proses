@@ -1,0 +1,29 @@
+### Login
+POST http://localhost:3000/auth/sign-in
+content-type: application/json
+
+{
+  "email": "gusher@gmail.com",
+  "password": "19112004"
+}
+
+### Request refresh token
+POST http://localhost:3000/auth/refresh-token
+content-type: application/json
+
+{
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJHdXNoZXIiLCJlbWFpbCI6Imd1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MDU5MDU5ODgsImV4cCI6MTcwODQ5Nzk4OH0.G6Nk9oGtVk8b_MWtmEB33hvGLMmJbXR9RgjIx50vIhs"
+}
+
+### Get user
+GET http://localhost:3000/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJHdXNoZXIiLCJlbWFpbCI6Imd1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MDU4NDk1MDQsImV4cCI6MTcwNTg0OTU2NH0.3H0pl0ZBWDGLiO1sgaERSaOJ6RjtBmPiahs5lj_wkYI
+
+### Sign out
+POST http://localhost:3000/auth/sign-out
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJHdXNoZXIiLCJlbWFpbCI6Imd1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MDU4NDk1MDQsImV4cCI6MTcwNTg0OTU2NH0.3H0pl0ZBWDGLiO1sgaERSaOJ6RjtBmPiahs5lj_wkYI
+
+{
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJHdXNoZXIiLCJlbWFpbCI6Imd1c2hlckBnbWFpbC5jb20iLCJpYXQiOjE3MDU5MDYwMTQsImV4cCI6MTcwNTkwNjA3NH0.HkUTJiIgPkYueP0KhX5D3c8WwqWKZnq19PfDLrd8O_E"
+}
