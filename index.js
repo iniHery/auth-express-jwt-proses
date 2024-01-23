@@ -15,7 +15,7 @@ const refreshTokens = [];
 
 app.use(bodyParser.json());
 
-// Public routes
+// Public routes for login users
 app.get("/", (req, res) => {
   res.send({ success: true });
 });
@@ -85,7 +85,7 @@ app.post("/auth/refresh-token", (req, res) => {
   });
 });
 
-// Private routes
+// Private routes for get profile user via login
 app.get("/me", authorization, (req, res) => {
   const userId = req.user.id;
   const user = getUserById(userId);
